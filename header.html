@@ -1,20 +1,128 @@
+<style>
+   /* General Reset */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.masthead {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.masthead__inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.masthead__logo .logo {
+    height: 40px;
+    cursor: pointer;
+}
+
+.masthead__nav {
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu li a {
+    font-size: 16px;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #00e169;
+    color: #fff;
+}
+
+/* Mobile Responsiveness */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+</style?
+
+
 <link rel="shortcut icon" href="images/icon_transparent.png">
-<div class="masthead">
-   <div class="masthead__inner-wrap">
-      <div class="masthead__menu">
-         <nav id="site-nav" class="greedy-nav">
-            <ul class="visible-links">
-               <li style="font-size: medium;"><a href="index.html">Home</a></li>
-               <li style="font-size: medium;"><a href="experience.html">Experience</a></li>
-               <li style="font-size: medium;"><a href="ml-projects.html">ML Projects</a></li>
-               <li style="font-size: medium;"><a href="sde-projects.html">SDE Projects</a></li>
-               <li style="font-size: medium;"><a href="other-projects.html">Other Projects</a></li>
-               <li style="font-size: medium;"><a href="case-studies.html">Case Studies</a></li>
-               <li style="font-size: medium;"><a href="skills.html">Skills</a></li>
-               <li style="font-size: medium;"><a href="files/Abhinav_Bohra_Resume.pdf">Resume</a></li>
-            </ul>
-         <div style="float: right; margin: -40px ; height:50px; width: 50px ;"> <img src="images/icon.png" alt="Abhinav Bohra Ab Logo"></img></div>
-         </nav>
-      </div>
-   </div>
-</div>   
+<header class="masthead">
+        <div class="masthead__inner-wrap">
+            <div class="masthead__logo">
+                <img src="images/icon.png" alt="Abhinav Bohra Logo" class="logo">
+            </div>
+            <nav id="site-nav" class="masthead__nav">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="ml-projects.html">ML Projects</a></li>
+                    <li><a href="sde-projects.html">SDE Projects</a></li>
+                    <li><a href="other-projects.html">Other Projects</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="files/Abhinav_Bohra_Resume.pdf">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
