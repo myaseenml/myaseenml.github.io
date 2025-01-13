@@ -1,45 +1,20 @@
 <link rel="shortcut icon" href="images/icon_transparent.png">
 <div class="masthead">
-   <div class="masthead__inner-wrap" style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
-      <div class="masthead__menu" style="flex-grow: 1;">
-         <nav id="site-nav" class="greedy-nav" style="position: relative;">
-            <button id="menu-toggle" style="background: none; border: none; font-size: 24px; cursor: pointer; display: none;">☰</button>
-            <ul id="menu" class="visible-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px;">
-               <li style="font-size: medium;"><a href="index.html" style="text-decoration: none;">Home</a></li>
-               <li style="font-size: medium;"><a href="experience.html" style="text-decoration: none;">Experience</a></li>
-               <li style="font-size: medium;"><a href="ml-projects.html" style="text-decoration: none;">ML Projects</a></li>
-               <li style="font-size: medium;"><a href="sde-projects.html" style="text-decoration: none;">SDE Projects</a></li>
-               <li style="font-size: medium;"><a href="other-projects.html" style="text-decoration: none;">Other Projects</a></li>
-               <li style="font-size: medium;"><a href="case-studies.html" style="text-decoration: none;">Case Studies</a></li>
-               <li style="font-size: medium;"><a href="skills.html" style="text-decoration: none;">Skills</a></li>
-               <li style="font-size: medium;"><a href="files/Abhinav_Bohra_Resume.pdf" style="text-decoration: none;">Resume</a></li>
+   <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+         <nav id="site-nav" class="greedy-nav">
+            <ul class="visible-links">
+               <li style="font-size: medium;"><a href="index.html">Home</a></li>
+               <li style="font-size: medium;"><a href="experience.html">Experience</a></li>
+               <li style="font-size: medium;"><a href="ml-projects.html">ML Projects</a></li>
+               <li style="font-size: medium;"><a href="sde-projects.html">SDE Projects</a></li>
+               <li style="font-size: medium;"><a href="other-projects.html">Other Projects</a></li>
+               <li style="font-size: medium;"><a href="case-studies.html">Case Studies</a></li>
+               <li style="font-size: medium;"><a href="skills.html">Skills</a></li>
+               <li style="font-size: medium;"><a href="files/Abhinav_Bohra_Resume.pdf">Resume</a></li>
             </ul>
-            <div style="float: right; height: 50px; width: 50px;">
-               <img src="images/icon.png" alt="Abhinav Bohra Ab Logo" style="width: 100%; height: auto;">
-            </div>
+         <div style="float: right; margin: -40px ; height:50px; width: 50px ;"> <img src="images/icon.png" alt="Abhinav Bohra Ab Logo"></img></div>
          </nav>
       </div>
    </div>
-</div>
-
-<script>
-   // JavaScript for menu toggle
-   const menuToggle = document.getElementById('menu-toggle');
-   const menu = document.getElementById('menu');
-   menuToggle.addEventListener('click', () => {
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-   });
-
-   // Responsive menu setup
-   function updateMenuDisplay() {
-      if (window.innerWidth <= 768) {
-         menu.style.display = 'none';
-         menuToggle.style.display = 'block';
-      } else {
-         menu.style.display = 'flex';
-         menuToggle.style.display = 'none';
-      }
-   }
-   window.addEventListener('resize', updateMenuDisplay);
-   window.addEventListener('load', updateMenuDisplay);
-</script>
+</div>   
